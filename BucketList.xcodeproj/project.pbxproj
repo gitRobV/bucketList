@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1839F86F1F16AB480095B395 /* BucketList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1839F86D1F16AB480095B395 /* BucketList.xcdatamodeld */; };
 		18BD51EB1F142CFC00D795FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD51EA1F142CFC00D795FA /* AppDelegate.swift */; };
 		18BD51ED1F142CFC00D795FA /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD51EC1F142CFC00D795FA /* BucketListViewController.swift */; };
 		18BD51F01F142CFC00D795FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BD51EE1F142CFC00D795FA /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1839F86E1F16AB480095B395 /* BucketList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BucketList.xcdatamodel; sourceTree = "<group>"; };
 		18BD51E71F142CFC00D795FA /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BD51EA1F142CFC00D795FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18BD51EC1F142CFC00D795FA /* BucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				18BD51EA1F142CFC00D795FA /* AppDelegate.swift */,
+				1839F86D1F16AB480095B395 /* BucketList.xcdatamodeld */,
 				18BD51EC1F142CFC00D795FA /* BucketListViewController.swift */,
 				18BD521A1F143FE800D795FA /* addItemTableTableViewController.swift */,
 				18BD51EE1F142CFC00D795FA /* Main.storyboard */,
@@ -270,6 +273,7 @@
 			files = (
 				18BD51ED1F142CFC00D795FA /* BucketListViewController.swift in Sources */,
 				18BD51EB1F142CFC00D795FA /* AppDelegate.swift in Sources */,
+				1839F86F1F16AB480095B395 /* BucketList.xcdatamodeld in Sources */,
 				18BD521D1F1442BF00D795FA /* BucketListDelegate.swift in Sources */,
 				18BD521B1F143FE800D795FA /* addItemTableTableViewController.swift in Sources */,
 			);
@@ -524,6 +528,7 @@
 				18BD52111F142CFC00D795FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18BD52121F142CFC00D795FA /* Build configuration list for PBXNativeTarget "BucketListTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +537,7 @@
 				18BD52141F142CFC00D795FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18BD52151F142CFC00D795FA /* Build configuration list for PBXNativeTarget "BucketListUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,8 +546,22 @@
 				18BD52171F142CFC00D795FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1839F86D1F16AB480095B395 /* BucketList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1839F86E1F16AB480095B395 /* BucketList.xcdatamodel */,
+			);
+			currentVersion = 1839F86E1F16AB480095B395 /* BucketList.xcdatamodel */;
+			path = BucketList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 18BD51DF1F142CFC00D795FA /* Project object */;
 }
