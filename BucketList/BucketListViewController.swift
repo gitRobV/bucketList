@@ -11,14 +11,15 @@ import UIKit
 class BucketListViewController: UITableViewController, BucketListDelegate {
     
     var bucketList = ["Spain", "Italy"]
-
-    @IBOutlet var bucketTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
     }
     
+   
     func cancelButtonPressed(by: UITableViewController) {
         print("Cancel by Bucket List View Controler")
         dismiss(animated: true, completion: nil)
@@ -37,29 +38,30 @@ class BucketListViewController: UITableViewController, BucketListDelegate {
                 bucketList.append(text)
             }
             dismiss(animated: true, completion: nil)
-            bucketTableView.reloadData()
+            tableView.reloadData()
         }
     }
     
+    @IBAction func addButton(_ sender: UIBarButtonItem) {
+        let data = ["addButton"]
+        performSegue(withIdentifier: "BucketTaskSegue", sender: data)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "addSegue" {
-            let navController = segue.destination as! UINavigationController
-            let addItemController = navController.topViewController as! addItemTableTableViewController
-            addItemController.Delegate = self
-        } else {
-            let navController = segue.destination as! UINavigationController
-            let addItemController = navController.topViewController as! addItemTableTableViewController
-            addItemController.Delegate = self
-            
-            let indexPath = sender as! NSIndexPath
-            let item = bucketList[indexPath.row]
-            addItemController.item = item
-            addItemController.indexPath = indexPath
+        let navController = segue.destination as! UINavigationController
+        let addItemController = navController.topViewController as! addItemTableTableViewController
+        addItemController.Delegate = self
+        if let data: Array<Any> = sender as? Array<Any>{
+            if String(describing: data[0]) == "addButton" {
+                
+            }
+            if String(describing: data[0]) == "editButton" {
+                let indexPath = data[1] as! NSIndexPath
+                let item = bucketList[indexPath.row]
+                addItemController.item = item
+                addItemController.indexPath = indexPath
+            }
         }
-        
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,7 +70,8 @@ class BucketListViewController: UITableViewController, BucketListDelegate {
     
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        performSegue(withIdentifier: "editSegue", sender: indexPath)
+        let data = ["editButton", indexPath] as [Any]
+        performSegue(withIdentifier: "BucketTaskSegue", sender: data)
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

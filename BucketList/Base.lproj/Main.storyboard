@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LNf-Gf-7IK" id="lv2-Ta-4ar">
-                                    <rect key="frame" x="0.0" y="0.0" width="308" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -35,18 +35,17 @@
                     <navigationItem key="navigationItem" title="Bucket List" id="e4C-PB-ANp">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Nd-2j-Qhq">
                             <connections>
-                                <segue destination="igY-1x-L61" kind="presentation" identifier="addSegue" id="eoN-y5-kX3"/>
+                                <action selector="addButton:" destination="Feb-44-5FM" id="2kM-Fz-PQ8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bucketTableView" destination="hhQ-uE-BWy" id="SoU-ZM-m1K"/>
-                        <segue destination="igY-1x-L61" kind="presentation" identifier="editSegue" id="qNV-e2-sgT"/>
+                        <segue destination="igY-1x-L61" kind="presentation" identifier="BucketTaskSegue" id="RIs-qo-oKd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ct9-vU-4eP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2321" y="118"/>
+            <point key="canvasLocation" x="2476" y="116"/>
         </scene>
         <!--Add New-->
         <scene sceneID="tiW-Dk-k0E">
@@ -146,7 +145,4 @@
             <point key="canvasLocation" x="3226" y="-312"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="eoN-y5-kX3"/>
-    </inferredMetricsTieBreakers>
 </document>
